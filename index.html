@@ -1,25 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
     <title>OCK AGAR - KRAL MODU</title>
     <style>
         body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #000; }
-        /* Bu ayar o inatçı kırmızı kutuyu Dell ekranının dışına taşırıp yayar */
+        /* KayibotX mantığı: iFrame'i ekranın içine hapsetme, ekranı iFrame'in içine yay */
         iframe {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 180vw; /* Ekranı %180 genişletiyoruz */
-            height: 180vh; /* Ekranı %180 yükseltiyoruz */
+            width: 100vw;
+            height: 100vh;
             border: none;
-            /* %55 ölçeğe düşürerek geniş açıyı zorla veriyoruz */
-            transform: translate(-50%, -50%) scale(0.55); 
-            transform-origin: center;
+            display: block;
         }
     </style>
 </head>
 <body>
-    <iframe src="https://tr.agar.live"></iframe>
+    <iframe src="https://4justice404.github.io/"></iframe>
 </body>
 </html>
