@@ -1,20 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
 <head>
-    <title>OCK AGAR - KRAL MODU</title>
+    <meta charset="UTF-8">
+    <title>OCK AGAR - RADAR MODU</title>
     <style>
-        body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background-color: #000; }
+        /* Ekranı tamamen temizle ve karart */
+        body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #000; }
         
-        /* Bu ayar o modlu siteyi Dell'in ekranına tam oturtur */
+        /* Bu ayar siteyi devasa boyutta açıp sonra küçülterek haritayı genişletir */
         iframe {
-            width: 100vw;
-            height: 100vh;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 250%; /* Siteyi normalden 2.5 kat büyük açıyoruz */
+            height: 250%; 
             border: none;
-            display: block;
+            /* %40 ölçeğe düşürerek devasa bir alanı tek ekrana sığdırıyoruz */
+            transform: translate(-50%, -50%) scale(0.4); 
+            transform-origin: center;
         }
     </style>
 </head>
 <body>
-    <iframe src="https://4justice404.github.io/"></iframe>
+    <iframe src="https://tr.agar.live"></iframe>
 </body>
 </html>
