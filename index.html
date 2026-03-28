@@ -3,18 +3,18 @@
 <head>
     <title>OCK AGAR - KRAL MODU</title>
     <style>
-        /* Ekranın her yerini oyuna zorla açıyoruz */
         body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #000; }
         
-        /* Bu ayar o kırmızı kutuyu ekranına yayacak */
+        /* Bu ayar siteyi ekranın dışına taşırıp o kutuyu Dell'in ekranına zorla yayar */
         iframe {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
+            top: -25%; 
+            left: -25%;
+            width: 150vw; /* Ekranı %150 genişlettik */
+            height: 150vh; 
             border: none;
-            object-fit: cover; /* Görüntüyü ekrana yayar */
+            transform: scale(0.67); /* Geri küçülterek her şeyi ekrana sığdırdık */
+            transform-origin: center;
         }
     </style>
 </head>
