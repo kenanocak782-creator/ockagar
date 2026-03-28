@@ -5,16 +5,11 @@
     <style>
         body, html { margin: 0; padding: 0; overflow: hidden; background: #000; width: 100%; height: 100%; }
         
-        /* Ekranı tam kaplayan ve server listesini gösteren ayar */
+        /* Ekranı %100 dolduran ayar - Menüler ve Serverlar buraya sığacak */
         iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 125%; /* Ekranı biraz genişlettik */
-            height: 125%; 
+            width: 100vw;
+            height: 100vh;
             border: none;
-            transform: scale(0.8); /* %80 büyüklük: Hem geniş açı hem menüler net */
-            transform-origin: 0 0;
         }
     </style>
 </head>
