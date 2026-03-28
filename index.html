@@ -1,38 +1,25 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>OCK AGAR - RADAR</title>
+    <title>OCK AGAR - KRAL MODU</title>
     <style>
         body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #000; }
-        /* Kutu kıran ayar: Siteyi ekranın 1.5 katı büyüklükte zorluyoruz */
+        /* Bu ayar o inatçı kırmızı kutuyu Dell ekranının dışına taşırıp yayar */
         iframe {
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 150vw; 
-            height: 150vh;
+            width: 180vw; /* Ekranı %180 genişletiyoruz */
+            height: 180vh; /* Ekranı %180 yükseltiyoruz */
             border: none;
-            transform: translate(-50%, -50%) scale(0.67);
+            /* %55 ölçeğe düşürerek geniş açıyı zorla veriyoruz */
+            transform: translate(-50%, -50%) scale(0.55); 
             transform-origin: center;
         }
     </style>
 </head>
 <body>
-    <iframe id="gameFrame" src="https://tr.agar.live"></iframe>
-    
-    <script>
-        // Bu küçük kod parçası o kırmızı kutuyu (Canvas) bulup genişletmeye çalışır
-        var frame = document.getElementById('gameFrame');
-        setInterval(function() {
-            try {
-                var canvas = frame.contentWindow.document.querySelector('canvas');
-                if (canvas) {
-                    canvas.style.width = '100%';
-                    canvas.style.height = '100%';
-                }
-            } catch(e) {}
-        }, 1000);
-    </script>
+    <iframe src="https://tr.agar.live"></iframe>
 </body>
 </html>
