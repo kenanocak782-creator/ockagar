@@ -3,15 +3,16 @@
 <head>
     <title>OCK AGAR - KRAL MODU</title>
     <style>
-        /* Ekrandaki her şeyi sıfırla, boşluk bırakma */
         body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background-color: #000; }
         
-        /* Oyunu ekranın her köşesine zorla yay */
+        /* Bu sefer iframe'i ekranın %120'si yapıp kenarlardan taşırıyoruz ki o boşluklar kapansın */
         iframe {
-            width: 100vw;
-            height: 100vh;
+            position: absolute;
+            top: -10%; 
+            left: -10%;
+            width: 120vw;
+            height: 120vh;
             border: none;
-            display: block;
         }
     </style>
 </head>
