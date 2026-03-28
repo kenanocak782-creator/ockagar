@@ -3,16 +3,18 @@
 <head>
     <title>OCK AGAR - KRAL MODU</title>
     <style>
-        body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background-color: #000; }
+        /* Ekranın her yerini oyuna zorla açıyoruz */
+        body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #000; }
         
-        /* Bu sefer iframe'i ekranın %120'si yapıp kenarlardan taşırıyoruz ki o boşluklar kapansın */
+        /* Bu ayar o kırmızı kutuyu ekranına yayacak */
         iframe {
             position: absolute;
-            top: -10%; 
-            left: -10%;
-            width: 120vw;
-            height: 120vh;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
             border: none;
+            object-fit: cover; /* Görüntüyü ekrana yayar */
         }
     </style>
 </head>
