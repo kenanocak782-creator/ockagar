@@ -1,23 +1,16 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>OCK AGAR - RADAR MODU</title>
+    <title>OCK AGAR - RADAR</title>
     <style>
-        /* Ekranı tamamen temizle ve karart */
         body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #000; }
-        
-        /* Bu ayar siteyi devasa boyutta açıp sonra küçülterek haritayı genişletir */
         iframe {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 250%; /* Siteyi normalden 2.5 kat büyük açıyoruz */
-            height: 250%; 
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
             border: none;
-            /* %40 ölçeğe düşürerek devasa bir alanı tek ekrana sığdırıyoruz */
-            transform: translate(-50%, -50%) scale(0.4); 
-            transform-origin: center;
         }
     </style>
 </head>
