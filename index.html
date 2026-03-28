@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>OCK AGAR - KRAL MODU</title>
+    <title>OCK AGAR - FULL RADAR</title>
     <style>
-        body, html { margin: 0; padding: 0; overflow: hidden; background: #000; width: 100%; height: 100%; }
+        body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #000; }
         
-        /* Görüntüyü %60'a sabitledik, hem geniş açı hem de tıklanabilir oldu */
+        /* Bu ayar o kırmızı kutuyu ekranın her köşesine çiviler */
         iframe {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 166.6%; 
-            height: 166.6%; 
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
             border: none;
-            transform: translate(-50%, -50%) scale(0.6); 
-            transform-origin: center;
         }
     </style>
 </head>
 <body>
-    <iframe src="https://tr.agar.live"></iframe>
+    <iframe id="game" src="https://tr.agar.live"></iframe>
+
+    <script>
+        // Site açıldığında içindeki o dar kutuyu (canvas) bulup genişleten bomba
+        var frame = document.getElementById('game');
+        setInterval(function() {
+            try {
+                var canvas = frame.contentWindow.document.querySelector('canvas');
+                if (canvas) {
+                    canvas.style.width = '100vw';
+                    canvas.style.height = '100vh';
+                    canvas.style.maxWidth = 'none';
+                    canvas.style.maxHeight = 'none';
+                }
+            } catch(e) {}
+        }, 500);
+    </script>
 </body>
 </html>
