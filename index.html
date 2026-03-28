@@ -1,19 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>OCK AGAR - KRAL MODU</title>
+    <meta charset="UTF-8">
+    <title>OCK AGAR - RADAR</title>
     <style>
         body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #000; }
-        /* KayibotX mantığı: iFrame'i ekranın içine hapsetme, ekranı iFrame'in içine yay */
         iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100vw;
             height: 100vh;
             border: none;
-            display: block;
         }
     </style>
 </head>
 <body>
-    <iframe src="https://4justice404.github.io/"></iframe>
+    <iframe id="game" src="https://tr.agar.live"></iframe>
+
+    <script>
+        // Bu script o küçük kırmızı kutuyu bulup Dell ekranına zorla çiviler
+        var frame = document.getElementById('game');
+        setInterval(function() {
+            try {
+                var doc = frame.contentDocument || frame.contentWindow.document;
+                var canvas = doc.querySelector('canvas');
+                if (canvas) {
+                    canvas.style.setProperty('width', '100vw', 'important');
+                    canvas.style.setProperty('height', '100vh', 'important');
+                    canvas.style.position = 'fixed';
+                    canvas.style.top = '0';
+                    canvas.style.left = '0';
+                }
+            } catch(e) {}
+        }, 200);
+    </script>
 </body>
 </html>
